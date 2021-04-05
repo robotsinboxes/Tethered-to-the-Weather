@@ -14,24 +14,25 @@
             <div class="container">
               <h3 class="display-4">Weather Dashboard</h3>
               <p class="lead">Your choice for the most up-to-date weather on the web!</p>
+              <!--SEARCH FORM-->
+              <form class="searchForm">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="inputBox" placeholder="Search your city here" autofocus>
+                </div>
+                <button type="submit"
+                id="btn"
+                 class="submitBtn btn">Submit</button>
+                 <span class="msg"></span>
+            </form>
+    
             </div>
-          </div>
+        </div>
     </header>
     <main>
-        <!--SEARCH FORM-->
-        <form class="searchForm">
-            <div class="form-group">
-                <input type="text" class="form-control" id="inputBox" placeholder="Search your city here" autofocus>
-            </div>
-            <button type="submit"
-            id="btn"
-             class="submitBtn btn">Submit</button>
-             <span class="msg"></span>
-        </form>
         <!--LIST OF PREVIOUSLY SEARCHED--> 
         <pre class="lastSearched"></pre>
         <!--CURRENT WEATHER CARD-->
-        <div class="currentWeatherCard card ajax-section" width="100%;">
+        <div class="currentWeatherCard container-sm card ajax-section">
             <div class="currentCity">
                 <h3 type="text" class="cityName"></h3>
                 <span type="text" class="currentDate"></span>
@@ -44,50 +45,52 @@
             </ul>
         </div>
         <!--5DAY FORECAST LABEL-->
-        <div>
-            <h6 class="forecastTitle">5 Day Forecast</h6>
-        </div>
+        <container class="forecastTitle">
+            <div class="container-sm">
+                <h6 class="forecastTitle">5 Day Forecast</h6>
+            </div>
+        </container>
         <!--FORECAST CARDS-->
-        <div class="forecastCard card" style="width: 100%;">
+        <div class="forecastCard container-sm card" style="width: 100%;">
             <p type="text" class="forecastDate1 card-header"></p>
             <ul class="forecastDay1 list-group list-group-flush">
-                <li class="weatherIcon1" type="text"></li>  
+                <li class="weatherIcon1 list-group-item" type="text"></li>  
                 <li class="forecastStats1 list-group-item">Temp<span class="temp1" type="text"></span> </li>
                 <li class="wind1 list-group-item">Wind<span class="wind1" type="text"></span></li>
                 <li class="humidity1 list-group-item">Humidity<span class="humidity1" type="text"></span></li>
             </ul>
         </div>
-        <div class="forecastCard card" style="width: 100%;">
+        <div class="forecastCard container-sm card" style="width: 100%;">
             <p type="text" class="forecastDate2 card-header"></p>
             <ul class="forecastDay2 list-group list-group-flush">
-                <li class="weatherIcon2" type="text"></li>  
+                <li class="weatherIcon2 list-group-item" type="text"></li>  
                 <li class="forecastStats2 list-group-item">Temp<span class="temp2" type="text"></span> </li>
                 <li class="wind2 list-group-item">Wind<span class="wind2" type="text"></span></li>
                 <li class="humidity2 list-group-item">Humidity<span class="humidity2" type="text"></span></li>
             </ul>
         </div>
-        <div class="forecastCard card" style="width: 100%;">
+        <div class="forecastCard container-sm card" style="width: 100%;">
             <p type="text" class="forecastDate3 card-header"></p>
             <ul class="forecastDay3 list-group list-group-flush">
-                <li class="weatherIcon3" type="text"></li>  
+                <li class="weatherIcon3 list-group-item" type="text"></li>  
                 <li class="forecastStats1 list-group-item">Temp<span class="temp3" type="text"></span> </li>
                 <li class="wind3 list-group-item">Wind<span class="wind3" type="text"></span></li>
                 <li class="humidity3 list-group-item">Humidity<span class="humidity3" type="text"></span></li>
             </ul>
         </div>
-        <div class="forecastCard card" style="width: 100%;">
+        <div class="forecastCard container-sm card" style="width: 100%;">
             <p type="text" class="forecastDate4 card-header"></p>
             <ul class="forecastDay4 list-group list-group-flush">
-                <li class="weatherIcon4" type="text"></li>  
+                <li class="weatherIcon4 list-group-item" type="text"></li>  
                 <li class="forecastStats4 list-group-item">Temp<span class="temp4" type="text"></span> </li>
                 <li class="wind4 list-group-item">Wind<span class="wind4" type="text"></span></li>
                 <li class="humidity4 list-group-item">Humidity<span class="humidity4" type="text"></span></li>
             </ul>
         </div>
-        <div class="forecastCard card" style="width: 100%;">
+        <div class="forecastCard container-sm card" style="width: 100%;">
             <p type="text" class="forecastDate5 card-header"></p>
             <ul class="forecastDay5 list-group list-group-flush">
-                <li class="weatherIcon5" type="text"></li>  
+                <li class="weatherIcon5 list-group-item" type="text"></li>  
                 <li class="forecastStats5 list-group-item">Temp<span class="temp5" type="text"></span> </li>
                 <li class="wind5 list-group-item">Wind<span class="wind5" type="text"></span></li>
                 <li class="humidity5 list-group-item">Humidity<span class="humidity5" type="text"></span></li>
@@ -99,6 +102,10 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
+  ></script>
     <script src="Assets/js/script.js"></script>
 </body>
 </html>
