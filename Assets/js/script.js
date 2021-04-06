@@ -30,7 +30,7 @@ var humidity2 = document.querySelector('.humidity2');
 var humidity3 = document.querySelector('.humidity3');
 var humidity4 = document.querySelector('.humidity4');
 var humidity5 = document.querySelector('.humidity5');
-
+var icon1 = document.querySelector('.weatherIcon1')
 
 var date = moment().format('MM/DD/YYYY');
 forecastDate1.textContent = moment().add(1, "d").format('MM/DD/YYYY');
@@ -38,6 +38,7 @@ forecastDate2.textContent = moment().add(2, "d").format('MM/DD/YYYY');
 forecastDate3.textContent = moment().add(3, "d").format('MM/DD/YYYY');
 forecastDate4.textContent = moment().add(4, "d").format('MM/DD/YYYY');
 forecastDate5.textContent = moment().add(5, "d").format('MM/DD/YYYY');
+
 
 submitBtn.addEventListener('click', function(event) {
     event.preventDefault();
@@ -76,7 +77,7 @@ function getWeather (lat, lon) {
             currentTemp.textContent = "  " + Math.floor(weather.daily[0].temp.day) + "°F";
             currentWind.textContent = "  " + Math.floor(weather.daily[0].wind_speed) + " MPH";
             currentHumidity.textContent = "  " + weather.daily[0].humidity + "%";
-            currentUV.textContent =   weather.daily[0].uvi;
+            currentUV.textContent = "  " + weather.daily[0].uvi;
             temp1.textContent = "  " + Math.floor(weather.daily[1].temp.day) + "°F";
             wind1.textContent = "  " + Math.floor(weather.daily[1].wind_speed) + "MPH";
             humidity1.textContent = "  " + weather.daily[1].humidity + "%";
