@@ -1,0 +1,22 @@
+{
+  "name": "weather-dashboard",
+  "version": "1.0.0",
+  "description": "Look up any city to get current weather and a 5-day forecast.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robotsinboxes/weather_dashboard.git"
+  },
+  "author": "Lisa Goodell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robotsinboxes/weather_dashboard/issues"
+  },
+  "homepage": "https://github.com/robotsinboxes/weather_dashboard#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
