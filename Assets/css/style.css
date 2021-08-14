@@ -8,9 +8,16 @@
     height: 100vh;
     object-fit: cover;
 }
+
+/* #video2 {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+} */
+
 .container {
     position: absolute;
-    top: 25%;
+    top: 45%;
     margin-left: 6%;
     text-align: center;
     background-color: rgba(151, 234, 243, 0.461);
@@ -29,34 +36,26 @@
     font-size: 1.8em;
 } 
 
-#results {
-    background-image: url('../images/clouds-upsidedown.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-/* 
-.jumbotron {
-    background-image: url('../images/clouds-up.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 400px;
-    margin-bottom: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* #results {
+    position: absolute;
+    top: 45%;
+    margin-left: 6%;
+    display: inline-block;
     text-align: center;
-    border-bottom: 1.5px solid black;
-    z-index: 1;
+    background-color: rgba(151, 234, 243, 0.461);
+    padding: 20px;
+    border: 2px solid rgba(245, 213, 86, 0.632);
+    border-radius: 10px;
 } */
 
 #inputBox {
     background-color: white;
     width: 300px;
     display: flex;
-    border: 1px solid black;
+    border: 3px solid rgb(50, 150, 193);
+    border-radius: 10px;
     text-align: center;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .form-group {
@@ -76,23 +75,15 @@
 }
 
 .submitBtn {
-    background-color:rgba(247, 218, 180, 0.317);
+    background-color:rgba(245, 213, 86, 0.632);
     border: 1px solid black;
+    border-radius: 15px;
+    font-family: 'Quicksand', sans-serif;
 }
 
 
 .submitBtn:hover {
     background-color: rgb(247, 218, 180);
-}
-
-.forecastTitle {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 36px;
-    justify-content: center;
-    text-align: center;
-    margin: 0;
-    padding: 20px;
-
 }
 
 .currentWeatherCard {
@@ -104,6 +95,7 @@
     align-items: center;
     margin-top: 40px;
     margin-bottom: 40px;
+    /* display: none; */
 }
 
 .currentDate {
@@ -111,6 +103,16 @@
     background-color: rgba(255, 255, 255, 0);
     text-align: center;
     align-items: center;
+}
+
+.forecastTitle {
+    font-family:'Quicksand', sans-serif;
+    font-size: 36px;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    /* display: none; */
 }
 
 .forecastCard {
@@ -124,6 +126,7 @@
     padding: 15px;
     padding-top: 0;
     margin-bottom: 50px;
+    /* display: none; */
 }
 
 .forecastCard p {
