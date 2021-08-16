@@ -1,4 +1,4 @@
-Weather Dashboard App
+Teathered to The Weather - Weather Dashboard App
 
 https://robotsinboxes.github.io/weather_dashboard/
 
