@@ -11,15 +11,18 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="Assets/css/style.css">
-    <title>Weather Dashboard</title>
+    <title>Functional Weather Dashboard</title>
 </head>
 
 <body>
+    <!-- LANDING PAGE -->
     <div class="landing-page">
+
         <video id="video1" autoplay muted loop>
             <source src='Assets/video/sunnytree.mp4' type="video/mp4">
-        </video>            
-        <div class="overlay">
+        </video>        
+
+        <div class="container">
             <h3 class="display-4">Tethered to the Weather</h3>
             <p class="lead">Your choice for the most up-to-date weather on the web!</p>
             <!--SEARCH FORM-->
@@ -27,95 +30,102 @@
                 <div class="form-group">
                     <input type="text" class="form-control" id="inputBox" placeholder="Search your city here" autofocus>
                 </div>
-                <button type="submit" id="btn" class="submitBtn btn">Submit</button>
+                <button type="submit" id="btn" class="submitBtn btn"
+                onClick="document.getElementById('results').scrollIntoView();">Submit
+                </button>
                 <span class="msg"></span>
             </form>
         </div>
-        <!-- <video id="video2" autoplay muted loop>
+
+    </div>
+
+    <!-- RESULTS -->
+    <div class="results" id="results">
+
+        <video id="video2" autoplay muted loop>
             <source src='Assets/video/stormclouds.mp4' type="video/mp4">
-        </video> -->
-    </div>
+        </video>
 
-    <div class="results">
-        <div class="currentWeather">
-            <!--LIST OF PREVIOUSLY SEARCHED-->
-            <pre class="lastSearched"></pre>
-            <!--CURRENT WEATHER CARD-->
-            <div class="currentWeatherCard container-sm card ajax-section">
-                <div class="currentCity">
-                    <h1 type="text" class="cityName"></h1>
-                    <span type="text" class="currentDate"></span>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="currentStats list-group-item">Temp: <span id="currentTemp" type="text"></span></li.icon>
-                    <li class="currentStats list-group-item">Wind: <span id="currentWind" type="text"></span></li>
-                    <li class="currentStats list-group-item">Humidity: <span id="currentHumidity" type="text"></span>
-                    </li>
-                    <li class="currentStats list-group-item">UV Index:
-                        <span id="currentUV" type="text"></span></li>
-                </ul>
-            </div>
-        </div>
-        <div class="forecastSection">
-            <!--5DAY FORECAST LABEL-->
-            <div class="container-sm">
-                <h6 class="forecastTitle">5 Day Forecast</h6>
-            </div>
-            <!--FORECAST CARDS-->
-            <div class="card-deck">
-                <div class="forecastCard container-sm card">
-                    <p type="text" class="forecastDate1 card-header"></p>
-                    <ul class="forecastDay list-group list-group-flush">
-                        <!-- <li class="weatherIcon1 list-group-item" type="text"></li>   -->
-                        <li class="list-group-item">Temp: <span class="temp1" type="text"></span> </li>
-                        <li class="list-group-item">Wind: <span class="wind1" type="text"></span></li>
-                        <li class="list-group-item">Humidity: <span class="humidity1" type="text"></span></li>
-                    </ul>
-                </div>
-                <div class="forecastCard container-sm card">
-                    <p type="text" class="forecastDate2 card-header"></p>
-                    <ul class="forecastDay list-group list-group-flush">
-                        <!-- <li class="weatherIcon2 list-group-item" type="text"></li>   -->
-                        <li class="forecastStats2 list-group-item">Temp: <span class="temp2" type="text"></span>
+        <div class="weather">
+            <!-- <div class="currentWeather">
+                <!--LIST OF PREVIOUSLY SEARCHED-->
+                <!-- <pre class="lastSearched"></pre> -->
+                <!--CURRENT WEATHER CARD-->
+                <div class="currentWeatherCard container-sm card ajax-section">
+                    <div class="currentCity">
+                        <h1 type="text" class="cityName"></h1>
+                        <span type="text" class="currentDate"></span>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="currentStats list-group-item">TRRemp: <span id="currentTemp" type="text"></span></li.icon>
+                        <li class="currentStats list-group-item">Wind: <span id="currentWind" type="text"></span></li>
+                        <li class="currentStats list-group-item">Humidity: <span id="currentHumidity" type="text"></span>
                         </li>
-                        <li class="list-group-item">Wind: <span class="wind2" type="text"></span></li>
-                        <li class="list-group-item">Humidity: <span class="humidity2" type="text"></span></li>
+                        <li class="currentStats list-group-item">UV Index:
+                            <span id="currentUV" type="text"></span></li>
                     </ul>
                 </div>
-                <div class="forecastCard container-sm card">
-                    <p type="text" class="forecastDate3 card-header"></p>
-                    <ul class="forecastDay list-group list-group-flush">
-                        <!-- <li class="weatherIcon3 list-group-item" type="text"></li>   -->
-                        <li class="forecastStats1 list-group-item">Temp: <span class="temp3" type="text"></span>
-                        </li>
-                        <li class="list-group-item">Wind: <span class="wind3" type="text"></span></li>
-                        <li class="list-group-item">Humidity: <span class="humidity3" type="text"></span></li>
-                    </ul>
+
+            <div class="forecastSection">
+                <!--5DAY FORECAST LABEL-->
+                    <div class="container-sm">
+                        <h6 class="forecastTitle">5 Day Forecast</h6>
+                    </div>
+                <!--FORECAST CARDS-->
+                <div class="card-deck">
+                    <div class="forecastCard container-sm card">
+                        <p type="text" class="forecastDate1 card-header"></p>
+                        <ul class="forecastDay list-group list-group-flush">
+                            <!-- <li class="weatherIcon1 list-group-item" type="text"></li>   -->
+                            <li class="list-group-item">Temp: <span class="temp1" type="text"></span> </li>
+                            <li class="list-group-item">Wind: <span class="wind1" type="text"></span></li>
+                            <li class="list-group-item">Humidity: <span class="humidity1" type="text"></span></li>
+                        </ul>
+                    </div>
+                    <div class="forecastCard container-sm card">
+                        <p type="text" class="forecastDate2 card-header"></p>
+                        <ul class="forecastDay list-group list-group-flush">
+                            <!-- <li class="weatherIcon2 list-group-item" type="text"></li>   -->
+                            <li class="forecastStats2 list-group-item">Temp: <span class="temp2" type="text"></span>
+                            </li>
+                            <li class="list-group-item">Wind: <span class="wind2" type="text"></span></li>
+                            <li class="list-group-item">Humidity: <span class="humidity2" type="text"></span></li>
+                        </ul>
+                    </div>
+                    <div class="forecastCard container-sm card">
+                        <p type="text" class="forecastDate3 card-header"></p>
+                        <ul class="forecastDay list-group list-group-flush">
+                            <!-- <li class="weatherIcon3 list-group-item" type="text"></li>   -->
+                            <li class="forecastStats1 list-group-item">Temp: <span class="temp3" type="text"></span>
+                            </li>
+                            <li class="list-group-item">Wind: <span class="wind3" type="text"></span></li>
+                            <li class="list-group-item">Humidity: <span class="humidity3" type="text"></span></li>
+                        </ul>
+                    </div>
+                    <div class="forecastCard container-sm card">
+                        <p type="text" class="forecastDate4 card-header"></p>
+                        <ul class="forecastDay list-group list-group-flush">
+                            <!-- <li class="weatherIcon4 list-group-item" type="text"></li>   -->
+                            <li class="forecastStats4 list-group-item">Temp: <span class="temp4" type="text"></span>
+                            </li>
+                            <li class="list-group-item">Wind: <span class="wind4" type="text"></span></li>
+                            <li class="list-group-item">Humidity: <span class="humidity4" type="text"></span></li>
+                        </ul>
+                    </div>
+                    <div class="forecastCard container-sm card">
+                        <p type="text" class="forecastDate5 card-header"></p>
+                        <ul class="forecastDay list-group list-group-flush">
+                            <!-- <li class="weatherIcon5 list-group-item" type="text"></li>   -->
+                            <li class="forecastStats5 list-group-item">Temp: <span class="temp5" type="text"></span>
+                            </li>
+                            <li class="list-group-item">Wind: <span class="wind5" type="text"></span></li>
+                            <li class="list-group-item">Humidity: <span class="humidity5" type="text"></span></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="forecastCard container-sm card">
-                    <p type="text" class="forecastDate4 card-header"></p>
-                    <ul class="forecastDay list-group list-group-flush">
-                        <!-- <li class="weatherIcon4 list-group-item" type="text"></li>   -->
-                        <li class="forecastStats4 list-group-item">Temp: <span class="temp4" type="text"></span>
-                        </li>
-                        <li class="list-group-item">Wind: <span class="wind4" type="text"></span></li>
-                        <li class="list-group-item">Humidity: <span class="humidity4" type="text"></span></li>
-                    </ul>
-                </div>
-                <div class="forecastCard container-sm card">
-                    <p type="text" class="forecastDate5 card-header"></p>
-                    <ul class="forecastDay list-group list-group-flush">
-                        <!-- <li class="weatherIcon5 list-group-item" type="text"></li>   -->
-                        <li class="forecastStats5 list-group-item">Temp: <span class="temp5" type="text"></span>
-                        </li>
-                        <li class="list-group-item">Wind: <span class="wind5" type="text"></span></li>
-                        <li class="list-group-item">Humidity: <span class="humidity5" type="text"></span></li>
-                    </ul>
-                </div>
-            </div>
+            </div> 
         </div>
     </div>
-
     <footer>
         <div> 
             <p class="footer">© Lisa Goodell 2021</p>

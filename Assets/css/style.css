@@ -3,21 +3,17 @@
     padding: 0px;
 } 
 
+/* ------------LANDING PAGE-------------- */
+
 #video1 {
     width: 100vw;
     height: 100vh;
     object-fit: cover;
 }
 
-/* #video2 {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-} */
-
-.overlay {
+.container {
     position: absolute;
-    top: 55%;
+    top: 60%;
     margin-left: 6%;
     text-align: center;
     background-color: rgba(151, 234, 243, 0.461);
@@ -26,27 +22,15 @@
     border-radius: 10px;
 }
 
-.overlay h3 {
+.container h3 {
     font-family: 'Lobster', cursive;
     font-size: 4em;
 }
 
-.overlay p {
+.container p {
     font-family: 'Quicksand', sans-serif;
     font-size: 1.8em;
 } 
-
-/* #results {
-    position: absolute;
-    top: 45%;
-    margin-left: 6%;
-    display: inline-block;
-    text-align: center;
-    background-color: rgba(151, 234, 243, 0.461);
-    padding: 20px;
-    border: 2px solid rgba(245, 213, 86, 0.632);
-    border-radius: 10px;
-} */
 
 #inputBox {
     background-color: white;
@@ -81,9 +65,31 @@
     font-family: 'Quicksand', sans-serif;
 }
 
-
 .submitBtn:hover {
     background-color: rgb(247, 218, 180);
+}
+
+/* ----------RESULTS PAGE----------- */
+
+#video2 {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+} 
+
+.results {
+    position: absolute;
+} 
+
+.weather {
+    position: absolute;
+    top: 60%;
+    margin-left: 6%;
+    text-align: center;
+    background-color: rgba(151, 234, 243, 0.461);
+    padding: 20px;
+    border: 2px solid rgba(245, 213, 86, 0.632);
+    border-radius: 10px;
 }
 
 .currentWeatherCard {
@@ -95,7 +101,7 @@
     align-items: center;
     margin-top: 40px;
     margin-bottom: 40px;
-    display: none;
+    /* display: none; */
 }
 
 .currentDate {
@@ -112,7 +118,7 @@
     text-align: center;
     margin: 0;
     padding: 20px;
-    display: none;
+    /* display: none; */
 }
 
 .forecastCard {
@@ -126,8 +132,7 @@
     padding: 15px;
     padding-top: 0;
     margin-bottom: 50px;
-    display: none;
-
+    /* display: none; */
 }
 
 .forecastCard p {
