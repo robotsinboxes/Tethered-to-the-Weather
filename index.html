@@ -15,9 +15,9 @@
 </head>
 
 <body>
-    <!-- LANDING PAGE -->
-    <div class="landing-page">
 
+    <!-- LANDING PAGE -->
+    <div class="landing-page" id="landing-page">
         <video id="video1" autoplay muted loop>
             <source src='Assets/video/sunnytree.mp4' type="video/mp4">
         </video>        
@@ -36,7 +36,6 @@
                 <span class="msg"></span>
             </form>
         </div>
-
     </div>
 
     <!-- RESULTS -->
@@ -47,30 +46,28 @@
         </video>
 
         <div class="weather">
-            <!-- <div class="currentWeather">
-                <!--LIST OF PREVIOUSLY SEARCHED-->
-                <!-- <pre class="lastSearched"></pre> -->
-                <!--CURRENT WEATHER CARD-->
-                <div class="currentWeatherCard container-sm card ajax-section">
-                    <div class="currentCity">
-                        <h1 type="text" class="cityName"></h1>
-                        <span type="text" class="currentDate"></span>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="currentStats list-group-item">TRRemp: <span id="currentTemp" type="text"></span></li.icon>
-                        <li class="currentStats list-group-item">Wind: <span id="currentWind" type="text"></span></li>
-                        <li class="currentStats list-group-item">Humidity: <span id="currentHumidity" type="text"></span>
-                        </li>
-                        <li class="currentStats list-group-item">UV Index:
-                            <span id="currentUV" type="text"></span></li>
-                    </ul>
+            
+            <!--CURRENT WEATHER CARD-->
+            <div class="currentWeatherCard container-sm card ajax-section">
+                <div class="currentCity">
+                    <h4 class="forecastTitle">Current Weather</h4>
+                    <h1 type="text" class="cityName"></h1>
+                    <span type="text" class="currentDate"></span>
                 </div>
-
+                <ul class="list-group list-group-flush">
+                    <li class="currentStats list-group-item">Temp: <span id="currentTemp" type="text"></span></li.icon>
+                    <li class="currentStats list-group-item">Wind: <span id="currentWind" type="text"></span></li>
+                    <li class="currentStats list-group-item">Humidity: <span id="currentHumidity" type="text"></span>
+                    </li>
+                    <li class="currentStats list-group-item">UV Index: <span id="currentUV" type="text"></span></li>
+                </ul>
+            </div>
+            
+            <!-- 5 DAY FORECAST -->
             <div class="forecastSection">
-                <!--5DAY FORECAST LABEL-->
-                    <div class="container-sm">
-                        <h6 class="forecastTitle">5 Day Forecast</h6>
-                    </div>
+                <div class="container-sm">
+                    <h6 class="forecastTitle">5 Day Forecast</h6>
+                </div>
                 <!--FORECAST CARDS-->
                 <div class="card-deck">
                     <div class="forecastCard container-sm card">
@@ -123,14 +120,21 @@
                         </ul>
                     </div>
                 </div>
+                <div>
+                    <button type="submit" id="btn" class="submitBtn btn"
+                    onClick="document.getElementById('landing-page').scrollIntoView();">Click to try a different city
+                    </button>
+                </div>
             </div> 
         </div>
     </div>
-    <footer>
+
+    <!-- <footer>
         <div> 
             <p class="footer">© Lisa Goodell 2021</p>
         </div>
-    </footer>
+    </footer> -->
+
 </body>
 
 
