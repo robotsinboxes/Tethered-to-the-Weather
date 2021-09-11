@@ -1,7 +1,6 @@
 .body {
     margin: 0px;
     padding: 0px;
-
 } 
 
 #video1 {
@@ -10,17 +9,16 @@
     object-fit: cover;
 }
 
-#video2 {
+/* #video2 {
     width: 100vw;
     height: 100vh;
     object-fit: cover;
-}
+} */
 
 .overlay {
     position: absolute;
-    top: 45%;
+    top: 55%;
     margin-left: 6%;
-    display: inline-block;
     text-align: center;
     background-color: rgba(151, 234, 243, 0.461);
     padding: 20px;
@@ -38,7 +36,7 @@
     font-size: 1.8em;
 } 
 
-#results {
+/* #results {
     position: absolute;
     top: 45%;
     margin-left: 6%;
@@ -48,7 +46,7 @@
     padding: 20px;
     border: 2px solid rgba(245, 213, 86, 0.632);
     border-radius: 10px;
-}
+} */
 
 #inputBox {
     background-color: white;
